@@ -8,27 +8,34 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="index.js" defer></script>
 </head>
 <body>
   <!-- HEADER (Copied from main website) -->
-  <div class="header">
-    <div class="Logo">
-      <img src="image/image-removebg-preview.png" alt="Logo" class="img_logo">
-    </div>
-    <button class="menu-toggle" aria-label="Toggle navigation">
+  <header class="header">
+    <a href="index.html#home" class="logo">
+      <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="logo-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <i class="fas fa-bars"></i>
   </button>
     <div class="header_context">
       <ul>
-        <li><a href="index.html#home" class="Header_cont">Home</a></li>
-        <li><a href="index.html#about" class="Header_cont">About</a></li>
-        <li><a href="index.html#products" class="Header_cont">Products</a></li>
-        <li><a href="index.html#solutions" class="Header_cont">Building Solutions</a></li>
-        <li><a href="index.html#contact" class="Header_cont">Contact</a></li>
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#products" class="nav-link">Products</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Building Solutions</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
+  </header>
+
+  <div class="scroll-beam">
+    <div class="scroll-beam__fill"></div>
   </div>
 
   <!-- HERO SECTION -->
@@ -81,7 +88,7 @@
   <div class="Footer">
 <div class="grid_content">
 <div class="block">
-  <img src="image/image-removebg-preview.png" alt="" class="img_logo">
+  <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="img_logo">
   <p>Leading manufacturer of innovative polystyrene products and building solutions for modern construction.
   </p>
 </div>

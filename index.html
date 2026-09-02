@@ -9,6 +9,9 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 <script src="index.js" defer></script>
@@ -24,51 +27,53 @@
 </script>
 </head>
 <body>
-<div class="header">
-  <div class="Logo">
-    <img src="image/image-removebg-preview.png" alt="Logo" class="img_logo">
-  </div>
-  <button class="menu-toggle" aria-label="Toggle navigation">
+<header class="header">
+  <a href="#home" class="logo">
+    <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="logo-img">
+  </a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <i class="fas fa-bars"></i>
   </button>
 
   <div class="header_context">
     <ul>
-      <li><a href="#home" class="Header_cont">Home</a></li>
-      <li><a href="#about" class="Header_cont">About</a></li>
-      <li><a href="#products" class="Header_cont">Products</a></li>
-      <li><a href="#solutions" class="Header_cont">Building Solutions</a></li>
-      <li><a href="#contact" class="Header_cont">Contact</a></li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#products" class="nav-link">Products</a></li>
+      <li><a href="#solutions" class="nav-link">Building Solutions</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </div>
+</header>
+
+<div class="scroll-beam">
+  <div class="scroll-beam__fill"></div>
 </div>
 
-<div class="home_page" id="home">
-  <div class="home_page_overlay"></div> <!-- Added overlay for better text contrast -->
-  <img src="image/home.jpg" alt="" class="home_page_image">
-  <div class="home_text_container">
-    <div class="Innovative">
-      <h1 id="Polystyrene">Leemtech <span id="Polystyrene">Polystyrene</span> Products for Modern Construction</h1>
-    </div>
-    <div class="quality_p">
-      <p style="color: black;">Leemtech provides high-quality polystyrene products and building solutions that combine efficiency, sustainability, and innovation for construction projects of all sizes.</p>
-    </div>
+<section class="hero" id="home">
+  <div class="hero__panel">
+    <p class="hero__tag">Polystyrene manufacturer based in Lagos, Nigeria</p>
+    <h1 class="hero__title">Leemtech Polystyrene Products for Modern Construction</h1>
+    <p class="hero__lede">Leemtech provides high-quality polystyrene products and building solutions that combine efficiency, sustainability, and innovation for construction projects of all sizes.</p>
   </div>
-</div>
+  <div class="hero__media">
+    <img src="image/home.jpg" alt="Polystyrene panels installed on a modern building exterior" class="hero__image">
+  </div>
+</section>
 
 <!-- About Page -->
 <div class="About" id="about">
   <div class="About_Leemtech">
-    <h2 class="About_Leemtech_Context_Header">About Leemtech</h2>
-    <p class="About_Leemtech_Context_Header_P">
-      We are a leading manufacturer of high-quality polystyrene products with over 15 years of <br>
+    <h2 class="About_Leemtech_Context_Header reveal">About Leemtech</h2>
+    <p class="About_Leemtech_Context_Header_P reveal">
+      We are a leading manufacturer of high-quality polystyrene products with over 15 years of
       experience in providing innovative solutions for the construction industry.
     </p>
 
     <div class="extra">
-<img src="image/IMG-20251022-WA0056[1].jpg" alt="" class="extra_img">
+<img src="image/IMG-20251022-WA0056[1].jpg" alt="Leemtech polystyrene products on display" class="extra_img reveal-left">
 
-      <div class="Commitment">
+      <div class="Commitment reveal-right">
         <h4 class="extra_context">Our Commitment to Excellence</h4>
         <p class="abt_txt">
           At Leemtech, we're committed to providing the highest quality polystyrene 
@@ -76,48 +81,56 @@
           expert engineers and designers work tirelessly to develop innovative 
           solutions that enhance building efficiency, safety, and sustainability.
         </p>
+      </div>
+    </div>
 
-        <!-- Quality Assurance -->
-        <div class="bout_quality">
-          <div class="Quality-Assurance">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1f28d3" d="M12 21.9q-.175 0-.325-.025t-.3-.075Q8 20.675 6 17.638T4 11.1V6.375q0-.625.363-1.125t.937-.725l6-2.25q.35-.125.7-.125t.7.125l6 2.25q.575.225.938.725T20 6.375V11.1q0 3.5-2 6.538T12.625 21.8q-.15.05-.3.075T12 21.9m0-2q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9"/></svg>
-            <div>
-              <h4>Quality Assurance</h4>
-              <p class="all">All products undergo rigorous
-                testing to ensure durability 
-                and performance</p>
-            </div>
-          </div>
+    <!-- Quality Assurance -->
+    <div class="bout_quality">
+      <div class="Quality-Assurance reveal">
+        <span class="spec-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.9q-.175 0-.325-.025t-.3-.075Q8 20.675 6 17.638T4 11.1V6.375q0-.625.363-1.125t.937-.725l6-2.25q.35-.125.7-.125t.7.125l6 2.25q.575.225.938.725T20 6.375V11.1q0 3.5-2 6.538T12.625 21.8q-.15.05-.3.075T12 21.9m0-2q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9"/></svg>
+        </span>
+        <div>
+          <h4>Quality Assurance</h4>
+          <p class="all">All products undergo rigorous
+            testing to ensure durability 
+            and performance</p>
+        </div>
+      </div>
 
-          <!-- Eco-Friendly -->
-          <div class="Eco-Friendly">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#1f28d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5h3z"/></g></svg>    
-            <div>
-              <h4>Eco-Friendly</h4>
-              <p class="all">Our production methods minimize waste
-                and promote sustainable materials.</p>
-            </div>
-          </div>
+      <!-- Eco-Friendly -->
+      <div class="Eco-Friendly reveal">
+        <span class="spec-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5h3z"/></g></svg>
+        </span>
+        <div>
+          <h4>Eco-Friendly</h4>
+          <p class="all">Our production methods minimize waste
+            and promote sustainable materials.</p>
+        </div>
+      </div>
 
-          <!-- Energy Efficient -->
-          <div class="Energy-Efficient">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#1f28d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5h3z"/></g></svg>    
-            <div>
-              <h4>Energy Efficient</h4>
-              <p class="all">Our insulation products reduce energy
-                consumption and improve building comfort.</p>
-            </div>
-          </div>
+      <!-- Energy Efficient -->
+      <div class="Energy-Efficient reveal">
+        <span class="spec-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+        </span>
+        <div>
+          <h4>Energy Efficient</h4>
+          <p class="all">Our insulation products reduce energy
+            consumption and improve building comfort.</p>
+        </div>
+      </div>
 
-          <!-- Industry Certified -->
-          <div class="Industry-Certified">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#1f28d3" d="m23 2l1.593 3L28 5.414l-2.5 2.253L26 11l-3-1.875L20 11l.5-3.333L18 5.414L21.5 5z"/><path fill="#1f28d3" d="m22.717 13.249l-1.938-.498a6.994 6.994 0 1 1-5.028-8.531l.499-1.937A8.99 8.99 0 0 0 8 17.69V30l6-4l6 4V17.708a8.96 8.96 0 0 0 2.717-4.459M18 26.263l-4-2.667l-4 2.667V19.05a8.92 8.92 0 0 0 8 .006Z"/></svg>   
-            <div>
-              <h4>Industry Certified</h4>
-              <p class="all">Certified to meet the highest 
-                international standards for quality and safety.</p>
-            </div>
-          </div>
+      <!-- Industry Certified -->
+      <div class="Industry-Certified reveal">
+        <span class="spec-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path fill="currentColor" d="m23 2l1.593 3L28 5.414l-2.5 2.253L26 11l-3-1.875L20 11l.5-3.333L18 5.414L21.5 5z"/><path fill="currentColor" d="m22.717 13.249l-1.938-.498a6.994 6.994 0 1 1-5.028-8.531l.499-1.937A8.99 8.99 0 0 0 8 17.69V30l6-4l6 4V17.708a8.96 8.96 0 0 0 2.717-4.459M18 26.263l-4-2.667l-4 2.667V19.05a8.92 8.92 0 0 0 8 .006Z"/></svg>
+        </span>
+        <div>
+          <h4>Industry Certified</h4>
+          <p class="all">Certified to meet the highest 
+            international standards for quality and safety.</p>
         </div>
       </div>
     </div>
@@ -126,137 +139,99 @@
 
 <!-- Our Polystyrene Product -->
 <div class="Our-Polystyrene-Product" id="products">
-  <h2 class="Our-Polystyrene-Product_h2">Our Polystyrene Product</h2>
-  <p class="Our-Polystyrene-Product_Header_P">
+  <h2 class="Our-Polystyrene-Product_h2 reveal">Our Polystyrene Product</h2>
+  <p class="Our-Polystyrene-Product_Header_P reveal">
     Discover our range of high-quality polystyrene products designed for various applications 
-    <br>in construction, packaging, and insulation.
+    in construction, packaging, and insulation.
   </p>
 
   <!-- Main product cards -->
   <div class="grid-product-container">
-    <div class="grid-product-container_panel">
-      <img class="grid-product-img" src="image/corniens.jpg" alt="">
+    <div class="grid-product-container_panel reveal">
+      <img class="grid-product-img" src="image/corniens.jpg" alt="Leemtech polystyrene cornices installed along a ceiling edge">
       <div class="grid-product-txt">
         <h3 class="panels">Polystyrene Cornices</h3>
-        <p class="panels_p">
-          Lightweight: Easy on structures, making your home healthier.
-          <br>
-          Cost-Effective: Eliminates expensive casting, forming, and plastering.
-          <br>
-          Aesthetic: Machine-made for perfect shapes and designs
-          <br>
-          Time-Saving: Quick installation—ready under 2 days.
-          <br>
-          Durable: Can last up to 150–200 years.
-          <br>
-          Easy Installation: Suitable for all building types
-          <br>
-          Flexible: Can be added or redesigned even after roofing is done.
-          <br>
-          Variety of Sizes: Available to suit every project.
-          <br>
-          Affordable: Budget-friendly for all classes.
-        </p>
+        <ul class="spec-list">
+          <li><span class="spec-label">Lightweight</span>: Easy on structures, making your home healthier.</li>
+          <li><span class="spec-label">Cost-Effective</span>: Eliminates expensive casting, forming, and plastering.</li>
+          <li><span class="spec-label">Aesthetic</span>: Machine-made for perfect shapes and designs</li>
+          <li><span class="spec-label">Time-Saving</span>: Quick installation—ready under 2 days.</li>
+          <li><span class="spec-label">Durable</span>: Can last up to 150–200 years.</li>
+          <li><span class="spec-label">Easy Installation</span>: Suitable for all building types</li>
+          <li><span class="spec-label">Flexible</span>: Can be added or redesigned even after roofing is done.</li>
+          <li><span class="spec-label">Variety of Sizes</span>: Available to suit every project.</li>
+          <li><span class="spec-label">Affordable</span>: Budget-friendly for all classes.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="grid-product-container_panel">
-      <img class="grid-product-img_1" src="image/panel foam.jpg" alt="">
+    <div class="grid-product-container_panel reveal">
+      <img class="grid-product-img_1" src="image/panel foam.jpg" alt="Stacked polystyrene foam panels ready for shipping">
       <div class="grid-product-txt">
         <h3 class="panels">Polystyrene Foam Panel</h3>
-        <p class="panels_p">
-         Lightweight: Easy to handle, transport, and install.
-         <br>
-         Protective Packaging: Shock-absorbent and safe for fragile goods.
-         <br>
-         Durable Sheets: Long-lasting panels suitable for construction, insulation, and interiors.
-         <br>
-         Flexible & Customizable: Easily cut, shaped, or adapted for various projects.
-         <br>
-         Water-Resistant: Ideal for both indoor and outdoor applications.
-         <br>
-         Cost-Effective: Saves money compared to traditional materials without compromising quality.
-         <br>
-         Modern & Versatile: Meets industrial, commercial, and residential needs.
-        </p>
+        <ul class="spec-list">
+          <li><span class="spec-label">Lightweight</span>: Easy to handle, transport, and install.</li>
+          <li><span class="spec-label">Protective Packaging</span>: Shock-absorbent and safe for fragile goods.</li>
+          <li><span class="spec-label">Durable Sheets</span>: Long-lasting panels suitable for construction, insulation, and interiors.</li>
+          <li><span class="spec-label">Flexible &amp; Customizable</span>: Easily cut, shaped, or adapted for various projects.</li>
+          <li><span class="spec-label">Water-Resistant</span>: Ideal for both indoor and outdoor applications.</li>
+          <li><span class="spec-label">Cost-Effective</span>: Saves money compared to traditional materials without compromising quality.</li>
+          <li><span class="spec-label">Modern &amp; Versatile</span>: Meets industrial, commercial, and residential needs.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="grid-product-container_panel">
-      <img class="grid-product-img_2" src="image/interior.jpg" alt="">
+    <div class="grid-product-container_panel reveal">
+      <img class="grid-product-img_2" src="image/interior.jpg" alt="Polystyrene interior decorative panels on a living room ceiling">
       <div class="grid-product-txt">
         <h3 class="panels">Interior Decorations</h3>
-        <p class="panels_p">
-          Lightweight: Safe and reduces risk of falling.
-          <br>
-          Beautiful Finish: Machine-made panels for perfect, modern aesthetics.
-          <br>
-          Time-Saving: Quick installation—no casting required.
-          <br>
-          Durable: Long-lasting and low-maintenance.
-          <br>
-          Waterproof: Resists moisture better than traditional POP.
-          <br>
-          Cool & Insulating: Keeps interiors cooler and improves acoustics.
-          <br>
-          Easy Installation: Fits all types of buildings.
-          <br>
-          Flexible: Easily accommodates lighting and fittings.
-          <br>
-          Stylish Designs: Modern, architecturally compatible patterns.
-          <br>
-          Affordable: Cheaper than traditional POP without compromising quality.
-        </p>
+        <ul class="spec-list">
+          <li><span class="spec-label">Lightweight</span>: Safe and reduces risk of falling.</li>
+          <li><span class="spec-label">Beautiful Finish</span>: Machine-made panels for perfect, modern aesthetics.</li>
+          <li><span class="spec-label">Time-Saving</span>: Quick installation—no casting required.</li>
+          <li><span class="spec-label">Durable</span>: Long-lasting and low-maintenance.</li>
+          <li><span class="spec-label">Waterproof</span>: Resists moisture better than traditional POP.</li>
+          <li><span class="spec-label">Cool &amp; Insulating</span>: Keeps interiors cooler and improves acoustics.</li>
+          <li><span class="spec-label">Easy Installation</span>: Fits all types of buildings.</li>
+          <li><span class="spec-label">Flexible</span>: Easily accommodates lighting and fittings.</li>
+          <li><span class="spec-label">Stylish Designs</span>: Modern, architecturally compatible patterns.</li>
+          <li><span class="spec-label">Affordable</span>: Cheaper than traditional POP without compromising quality.</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <!-- Product Advert -->
   <div class="grid-product-container_product_advert">
-    <div class="grid-product-container_panel_advert">
-      <img class="grid-product-img_2_advert" src="image/Rs 250.jpg" alt="">
+    <div class="grid-product-container_panel_advert reveal">
+      <img class="grid-product-img_2_advert" src="image/Rs 250.jpg" alt="RSS Class polystyrene product">
       <div class="grid-product-txt">
         <h3 class="panels">RSS Class</h3>
         <p class="panelsp">An affordable choice that maintains essential quality and utility, perfect for businesses or individuals looking for economical yet dependable options.</p>
-        <!-- <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p> -->
         <div class="bth_holder">
-          <!-- <h3 class="panels">$50<span>/instant</span></h3> -->
-          <button class="bth_quote"><a href="#contact">Get a quotation</a></button>
+          <a class="bth_quote" href="#contact">Get a quotation</a>
         </div>
       </div>
     </div>
 
-    <div class="grid-product-container_panel_advert">
-      <img class="grid-product-img_2_advert" src="image/Rs 300.jpg" alt="">
+    <div class="grid-product-container_panel_advert reveal">
+      <img class="grid-product-img_2_advert" src="image/Rs 300.jpg" alt="RS Class polystyrene product">
       <div class="grid-product-txt">
         <h3 class="panels">RS Class</h3>
         <p class="panelsp">A versatile option that combines affordability with enhanced durability. Perfect for customers who want quality and practicality in equal measure.</p>
-        <!-- <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p> -->
         <div class="bth_holder">
-          <!-- <h3 class="panels">$50<span>/instant</span></h3> -->
-          <button class="bth_quote"><a href="#contact">Get a quotation</a></button>
+          <a class="bth_quote" href="#contact">Get a quotation</a>
         </div>
       </div>
     </div>
 
-    <div class="grid-product-container_panel_advert">
-      <img class="grid-product-img_2_advert" src="image/RS 500.jpg" alt="">
+    <div class="grid-product-container_panel_advert reveal">
+      <img class="grid-product-img_2_advert" src="image/RS 500.jpg" alt="R Class polystyrene product">
       <div class="grid-product-txt">
         <h3 class="panels">R Class</h3>
         <p class="panelsp">Combining superior materials with impeccable design, this king-size option ensures the highest standard of comfort and performance.</p>
-        <!-- <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p>
-        <p class="panelspp">Advanced analytics dashboard</p> -->
         <div class="bth_holder">
-          <!-- <h3 class="panels">$50<span>/instant</span></h3> -->
-          <button class="bth_quote"><a href="#contact">Get a quotation</a></button>
+          <a class="bth_quote" href="#contact">Get a quotation</a>
         </div>
       </div>
     </div>
@@ -265,19 +240,15 @@
 
 <!-- Building Solutions -->
 <div class="Building_Solutions" id="solutions"> 
-<h2 class="Building_Solutions_h2">Building Solutions</h2>
-<p class="Building_Solutions_P">
+<h2 class="Building_Solutions_h2 reveal">Building Solutions</h2>
+<p class="Building_Solutions_P reveal">
 Our innovative polystyrene building systems provide superior insulation, durability, and 
-<br>
 cost-effectiveness for modern construction projects.
 </p>
-<div class="grid_building_solution">
-<!-- Left side -->
-<div class="grid_context">
-<h3 class="Construction_Solutions">
-Our Construction Solutions
-</h3>
 
+<h3 class="Construction_Solutions reveal">Our Construction Solutions</h3>
+
+<div class="grid_context reveal">
 <div class="Concrete_form">
 <h3 class="custom_h3">Insulated Concrete Forms (ICF)</h3>
 <p class="custom_p">Energy-efficient building blocks for walls</p>
@@ -299,10 +270,10 @@ Our Construction Solutions
 </div>
 </div>
 
-<!-- Right side panels -->
+<div class="grid_building_solution reveal">
 <!-- Panel 1 -->
 <div class="grid-info">
-<img class="grid-info-img_1" src="image/polysteren block.jpg" alt="">
+<img class="grid-info-img_1" src="image/polysteren block.jpg" alt="Insulated Concrete Forms made from polystyrene blocks">
 <div class="grid-info-txt">
 <h2 class="info">Insulated Concrete Forms (ICF)</h2>
 <p class="info_p">
@@ -322,7 +293,7 @@ creating walls that offer superior thermal performance and structural integrity.
 
 <!-- Panel 2 -->
 <div class="grid-info">
-<img class="grid-info-img_1" src="image/pexels-photo-259588.png" alt="">
+<img class="grid-info-img_1" src="image/pexels-photo-259588.png" alt="Structural Insulated Panels used for walls and roofing">
 <div class="grid-info-txt">
 <h2 class="info">Structural Insulated Panels (SIPs)</h2>
 <p class="info_p">
@@ -345,7 +316,7 @@ making them ideal for sustainable building projects.
 
 <!-- Panel 3 -->
 <div class="grid-info">
-<img class="grid-info-img_1" src="image/Expanded Polystyrene (EPS) Roof Insulation.jpg" alt="">
+<img class="grid-info-img_1" src="image/Expanded Polystyrene (EPS) Roof Insulation.jpg" alt="Expanded Polystyrene roof insulation boards">
 <div class="grid-info-txt">
 <h2 class="info">Expanded Polystyrene (EPS) Roof Insulation</h2>
 <p class="info_p">
@@ -368,7 +339,7 @@ throughout the year.
 
 <!-- Panel 4 -->
 <div class="grid-info">
-<img class="grid-info-img_1" src="image/Untitled.png" alt="">
+<img class="grid-info-img_1" src="image/Untitled.png" alt="Geofoam blocks used as lightweight fill for infrastructure projects">
 <div class="grid-info-txt">
 <h2 class="info">Geofoam Blocks for Infrastructure</h2>
 <p class="info_p">
@@ -390,20 +361,20 @@ Our geofoam blocks provide a lightweight alternative to traditional fill materia
 </div>
 <!-- What Our Clients Say -->
 <div class="Clients_pg"> 
-<h2 class="Clients_pg_h2">What Our Clients Say</h2>
-<p class="Clients_pg_p">
+<h2 class="Clients_pg_h2 reveal">What Our Clients Say</h2>
+<p class="Clients_pg_p reveal">
 We take pride in our work and the satisfaction of our clients. Here's what they have to say
 <br>
 about Leemtech's products and services.
 </p>
-  <div class="clients-slider">
+  <div class="clients-slider reveal">
     <button class="slider-btn prev">&#10094;</button>
 <div class="slider-container">
 <div class="slider-wrapper">
 <div class="wrapper">
 <div class="clients_info_rating">
 <div class="clients_info">
-<img class="clients_info_img" src="image/pexels-photo-774909.png" alt="">
+<img class="clients_info_img" src="image/pexels-photo-774909.png" alt="Tiamiyu AbdulHaleem">
 <div class="clients_info_text_class">
 <h4 class="clients_info_name">Tiamiyu AbdulHaleem</h4>
 <p class="clients_comp">Project Manager, BuildRight Construction</p>
@@ -411,11 +382,11 @@ about Leemtech's products and services.
 </div>
 <div class="rating">
     <div class="rating_stars">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
     </div>
 </div>
 </div>
@@ -428,7 +399,7 @@ about Leemtech's products and services.
 <div class="wrapper">
 <div class="clients_info_rating">
 <div class="clients_info">
-<img class="clients_info_img" src="image/pexels-photo-614810.png" alt="">
+<img class="clients_info_img" src="image/pexels-photo-614810.png" alt="Michael Jinwoo">
 <div class="clients_info_text_class">
 <h4 class="clients_info_name">Michael Jinwoo</h4>
 <p class="clients_comp">Architect, Modern Spaces</p>
@@ -436,11 +407,11 @@ about Leemtech's products and services.
 </div>
 <div class="rating">
     <div class="rating_stars">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
     </div>
 </div>
 </div>
@@ -453,7 +424,7 @@ about Leemtech's products and services.
 <div class="wrapper">
 <div class="clients_info_rating">
 <div class="clients_info">
-<img class="clients_info_img" src="image/pexels-photo-220453.png" alt="">
+<img class="clients_info_img" src="image/pexels-photo-220453.png" alt="David Potter">
 <div class="clients_info_text_class">
 <h4 class="clients_info_name">David Potter</h4>
 <p class="clients_comp">CEO, GreenBuild Developers</p>
@@ -461,11 +432,11 @@ about Leemtech's products and services.
 </div>
 <div class="rating">
     <div class="rating_stars">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff306" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
     </div>
 </div>
 </div>
@@ -482,13 +453,13 @@ about Leemtech's products and services.
 </div>
 <!--Frequently Asked Questions -->
 <div class="Asked_Questions"> 
-<h2 class="Asked_Questions_h2">Frequently Asked Questions</h2>
-<p class="Asked_Questions_p">
+<h2 class="Asked_Questions_h2 reveal">Frequently Asked Questions</h2>
+<p class="Asked_Questions_p reveal">
 Find answers to common questions about polystyrene products and their applications in
 <br>
 construction.
 </p>
-<div class="faq-wrapper">
+<div class="faq-wrapper reveal">
 <div class="fq_div">
   <div class="fq_btn_slider">
     <button class="bth_slider">
@@ -497,7 +468,7 @@ construction.
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path d="M24 0v24H0V0z" />
-            <path fill="rgb(16, 77, 130)" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
+            <path fill="currentColor" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
           </g>
         </svg>
       </span>
@@ -521,7 +492,7 @@ construction.
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path d="M24 0v24H0V0z" />
-            <path fill="rgb(16, 77, 130)" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
+            <path fill="currentColor" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
           </g>
         </svg>
       </span>
@@ -542,7 +513,7 @@ construction.
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path d="M24 0v24H0V0z" />
-            <path fill="rgb(16, 77, 130)" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
+            <path fill="currentColor" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
           </g>
         </svg>
       </span>
@@ -563,7 +534,7 @@ construction.
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path d="M24 0v24H0V0z" />
-            <path fill="rgb(16, 77, 130)" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
+            <path fill="currentColor" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
           </g>
         </svg>
       </span>
@@ -584,7 +555,7 @@ construction.
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path d="M24 0v24H0V0z" />
-            <path fill="rgb(16, 77, 130)" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
+            <path fill="currentColor" d="M10.94 7.94a1.5 1.5 0 0 1 2.12 0l5.658 5.656a1.5 1.5 0 1 1-2.122 2.121L12 11.122l-4.596 4.596a1.5 1.5 0 1 1-2.122-2.12z"/>
           </g>
         </svg>
       </span>
@@ -596,87 +567,91 @@ construction.
     </p>
   </div>
 </div>
-<div class="fq_question">
+<div class="fq_question reveal">
 <p class="more_fq">
     Still have questions?
 </p>
-<button class="contact_bth"><a href="#contact" class="contact_a">Contact Our Team</a></button>
+<a class="contact_bth" href="#contact">Contact Our Team</a>
 </div>
 </div>
 <!--  -->
 </div>
 <!-- Contact us -->
  <div class="Contact_Section" id="contact">
-<h2 class="Contact_Section_h2">Contact Us</h2>
-<p class="Contact_Section_p">
+<h2 class="Contact_Section_h2 reveal">Contact Us</h2>
+<p class="Contact_Section_p reveal">
 Have questions about our polystyrene products or building solutions? Our team is ready to
 <br>
 help you with your project needs.
 </p>
 <div class="contact_content">
-  <div class="message_card">
+  <div class="message_card reveal-left">
     <h2>Send Us A Message</h2>
     <div class="group_input">
       <div class="text_input">
 <p>Name</p>
-<input type="text" name="" id="" placeholder="Enter Your Name" class="name_txt">
+<input type="text" placeholder="Enter Your Name" class="name_txt">
       </div>
 <div class="email_input">
 <p class="email_input_p">Email</p>
-<input type="email" name="" id="email_inp" placeholder="john@gmail.com" >
+<input type="email" id="email_inp" placeholder="john@gmail.com" >
 </div>
     </div>
 <div class="group_input_submgs">
 <div class="subject_input">
   <p>Subject</p>
-  <input class="sub_input" type="text" name="" id="" placeholder="How can we help you?">
+  <input class="sub_input" type="text" placeholder="How can we help you?">
 </div>
 <div class="message_input">
   <p>Message</p>
-  <input class="msg_input" type="text" name="" id="" placeholder="How can we help you?">
+  <textarea class="msg_input" placeholder="How can we help you?"></textarea>
 </div>
 <button class="bth_send_mgs" onclick="sendMail()">Send Message</button>
 </div>
   </div>
   <!-- info -->
-  <div class="more_info">
+  <div class="more_info reveal-right">
     <h3 class="cont_info">Contact Information</h3>
     <div class="space">
    <div class="location">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(140, 185, 245)" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>    
-<h4 class="location_h">Our Location
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+<div class="contact-item-text">
+<h4 class="location_h">Our Location</h4>
 <p class="location_p">8 Tiamiyu Obajemu Street,
 <br>
 Royal Creek Valley Estate,
 <br>
 Bogije Ibeju Lekki Lagos
 </p>
-    </h4>
+</div>
     </div>
     <div class="guest">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(140, 185, 245)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"/></svg>
-<h4 class="location_h">Phone
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"/></svg>
+<div class="contact-item-text">
+<h4 class="location_h">Phone</h4>
 <p class="location_p">
 Sales: (234) 080-385-277-62
 <br>
 Support: (234) 081-368-280-54
 </p>
-<a class="location_p" href="https://wa.me/2348038527762?text=Hello%20Leemtech%2C%20I%27m%20here%20to%20make%20an%20enquiry" target="_blank">
+<a class="location_p whatsapp_link" href="https://wa.me/2348038527762?text=Hello%20Leemtech%2C%20I%27m%20here%20to%20make%20an%20enquiry" target="_blank">
   Chat with us on WhatsApp
 </a>
-</h4>
+</div>
     </div>
     <div class="mail">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(140, 185, 245)" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"/></svg>
-<h4 class="location_h" id="location_h">Email
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"/></svg>
+<div class="contact-item-text">
+<h4 class="location_h">Email</h4>
 <p class="location_p">
   leemtechgroup@gmail.com
 </p>
-</h4>
+</div>
     </div>
     <div class="time_h">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="rgb(140, 185, 245)" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1"/></g></svg>      
-<h4 class="location_h" id="location_b">Business Hours
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1"/></g></svg>
+<div class="contact-item-text">
+<h4 class="location_h">Business Hours</h4>
              <p class="location_p">
 Monday - Friday: 8:00 AM - 6:00 PM
 <br>
@@ -684,12 +659,12 @@ Saturday: 9:00 AM - 1:00 PM
 <br>
 Sunday: Closed
       </p>
-      </h4>
+      </div>
     </div>
     </div>
   </div>
   <!-- request_quot -->
-  <div class="request_quot">
+  <div class="request_quot reveal-right">
 <h3 class="a_q">
   Request a Quote
 </h3>
@@ -697,38 +672,38 @@ Sunday: Closed
 Need a customized solution for your project? Contact our sales team for a
 detailed quote tailored to your specific requirements.
 </p>
-<button class="a_q_bth" ><a class="a_q_bthh" href="https://wa.me/2348038527762?text=Hello%20Leemtech%2C%20I%27m%20here%20to%20make%20an%20enquiry" target="_blank">
+<a class="a_q_bth" href="https://wa.me/2348038527762?text=Hello%20Leemtech%2C%20I%27m%20here%20to%20make%20an%20enquiry" target="_blank">
   Request A Quote
-</a></button>
+</a>
   </div>
 </div>
 </div>
 <!-- Footer -->
  <div class="Footer">
-<div class="grid_content">
+<div class="grid_content reveal">
 <div class="block">
-  <img src="image/image-removebg-preview.png" alt="" class="img_logo">
+  <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="img_logo">
   <p>Leading manufacturer of innovative polystyrene products and building solutions for modern construction.
   </p>
 </div>
 <div class="block">
   <h3 class="link_">Quick Links</h3>
   <ul>
-   <li><a href="#home"  class="Header_cont">Home</a></li>
-<li><a href="#about" class="Header_cont">About</a></li>
-<li><a href="#products" class="Header_cont">Products</a></li>
-<li><a href="#solutions" class="Header_cont">Building Solutions</a></li>
-<li><a href="#contact" class="Header_cont">Contact</a></li>
+   <li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#solutions">Building Solutions</a></li>
+<li><a href="#contact">Contact</a></li>
   </ul>
 </div>
 <div class="block">
   <h3 class="link_">Our Product</h3>
   <ul>
-    <li><a href="#products"  class="Header_cont">Insulation Panels</a></li>
-<li><a href="#products" class="Header_cont">Packaging Solutions</a></li>
-<li><a href="#products" class="Header_cont">Decorative Moldings</a></li>
-<li><a href="#solutions" class="Header_cont">ICF Systems</a></li>
-<li><a href="#solutions" class="Header_cont">Structural Insulated Panels</a></li>
+    <li><a href="#products">Insulation Panels</a></li>
+<li><a href="#products">Packaging Solutions</a></li>
+<li><a href="#products">Decorative Moldings</a></li>
+<li><a href="#solutions">ICF Systems</a></li>
+<li><a href="#solutions">Structural Insulated Panels</a></li>
   </ul>
 </div>
 <div class="block">

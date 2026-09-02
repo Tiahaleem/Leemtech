@@ -5,11 +5,39 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("scrolled");
   }
+
+  const beamFill = document.querySelector(".scroll-beam__fill");
+  if (beamFill) {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    beamFill.style.width = scrollPercent + "%";
+  }
+});
+
+// Panel-slide scroll reveals
+document.addEventListener("DOMContentLoaded", () => {
+  const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+  if (!revealEls.length) return;
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
 });
 const toggleBtn = document.querySelector('.menu-toggle');
   const headerContext = document.querySelector('.header_context');
   const icon = toggleBtn.querySelector('i');
-  const navLinks = document.querySelectorAll('.Header_cont');
+  const navLinks = headerContext.querySelectorAll('a');
 
   // Toggle menu open/close
   toggleBtn.addEventListener('click', () => {
