@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Login | Leemtech</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-card">
+    <a href="index.html" class="login-logo">
+      <img src="image/image-removebg-preview.png" alt="Leemtech logo">
+    </a>
+    <h1 class="login-title">Admin Login</h1>
+    <p class="login-sub">Sign in to manage products and gallery images.</p>
+
+    <form id="loginForm" class="login-form">
+      <div class="login-field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label for="loginPassword">Password</label>
+        <div class="login-password-wrap">
+          <input type="password" id="loginPassword" required autocomplete="current-password">
+          <button type="button" class="login-toggle-password" id="togglePassword" aria-label="Show password" aria-pressed="false">
+            <svg class="icon-eye" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="icon-eye-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+              <line x1="2" y1="2" x2="22" y2="22"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button type="submit" class="login-bth">Sign In</button>
+      <p class="login-error" id="loginError" hidden></p>
+    </form>
+
+    <a href="index.html" class="login-back">&larr; Back to website</a>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

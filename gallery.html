@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Leemtech</title>
+<!-- Font Awesome (for menu icons) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html#home" class="logo">
+    <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="logo-img">
+  </a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="header_context">
+    <ul>
+      <li><a href="index.html#home" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#products" class="nav-link">Products</a></li>
+      <li><a href="index.html#solutions" class="nav-link">Building Solutions</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="scroll-beam">
+  <div class="scroll-beam__fill"></div>
+</div>
+
+<section class="page-hero">
+  <p class="page-hero__tag reveal">Leemtech in the field</p>
+  <h1 class="page-hero__title reveal">Gallery</h1>
+  <p class="page-hero__lede reveal">A look at our polystyrene products and building solutions installed on real projects.</p>
+</section>
+
+<section class="gallery-section">
+  <div class="gallery-grid" id="galleryGrid">
+    <p class="gallery-empty">Loading gallery...</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Close">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+  </button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img src="" alt="" class="lightbox__img" id="lightboxImg">
+    <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+  </figure>
+  <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<!-- Footer -->
+<div class="Footer">
+<div class="grid_content">
+<div class="block">
+  <img src="image/image-removebg-preview.png" alt="Leemtech logo" class="img_logo">
+  <p>Leading manufacturer of innovative polystyrene products and building solutions for modern construction.
+  </p>
+</div>
+<div class="block">
+  <h3 class="link_">Quick Links</h3>
+  <ul>
+   <li><a href="index.html#home">Home</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#products">Products</a></li>
+<li><a href="index.html#solutions">Building Solutions</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</div>
+<div class="block">
+  <h3 class="link_">Our Product</h3>
+  <ul>
+    <li><a href="index.html#products">Insulation Panels</a></li>
+<li><a href="index.html#products">Packaging Solutions</a></li>
+<li><a href="index.html#products">Decorative Moldings</a></li>
+<li><a href="index.html#solutions">ICF Systems</a></li>
+<li><a href="index.html#solutions">Structural Insulated Panels</a></li>
+  </ul>
+</div>
+<div class="block">
+  <h3 class="link_">Newsletter</h3>
+  <p>Subscribe to our newsletter for the latest product updates and industry news.</p>
+  <div>
+    <input type="text" id="Subscribe" placeholder="Your email address">
+    <button class="Subscribe_bth">Subscribe</button>
+  </div>
+  <p>By subscribing you agree to our Privacy Policy.</p>
+</div>
+ </div>
+ <div class="footer-bottom">
+  <p>© 2025 Leemtech. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy-policy.html" target="_self">Privacy Policy</a>
+    <a href="terms.html" target="_self">Terms & Condition</a>
+    <a href="#">Sitemap</a>
+  </div>
+</div>
+ </div>
+
+<script src="config.js"></script>
+<script src="index.js" defer></script>
+<script src="gallery.js" defer></script>
+</body>
+</html>

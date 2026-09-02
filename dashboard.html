@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard | Leemtech</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="dashboard-header">
+  <a href="index.html" class="dashboard-logo">
+    <img src="image/image-removebg-preview.png" alt="Leemtech logo">
+  </a>
+  <div class="dashboard-header-right">
+    <span class="dashboard-user" id="dashboardUserEmail"></span>
+    <button type="button" class="dashboard-logout" id="logoutBtn">Log Out</button>
+  </div>
+</header>
+
+<main class="dashboard-main">
+  <h1 class="dashboard-title">Admin Dashboard</h1>
+
+  <!-- Products -->
+  <section class="dashboard-section">
+    <h2 class="dashboard-section-title">Products</h2>
+
+    <form id="productForm" class="dashboard-form">
+      <input type="hidden" id="productId">
+
+      <div class="dashboard-field">
+        <label for="productName">Name</label>
+        <input type="text" id="productName" required>
+      </div>
+
+      <div class="dashboard-field">
+        <label for="productDescription">Description</label>
+        <textarea id="productDescription" rows="3"></textarea>
+      </div>
+
+      <div class="dashboard-field">
+        <label for="productFeatures">Features (one per line, e.g. "Lightweight: Easy to handle")</label>
+        <textarea id="productFeatures" rows="5"></textarea>
+      </div>
+
+      <div class="dashboard-field-row">
+        <div class="dashboard-field">
+          <label for="productSortOrder">Sort Order</label>
+          <input type="number" id="productSortOrder" value="0">
+        </div>
+
+        <div class="dashboard-field">
+          <label for="productImage">Image</label>
+          <input type="file" id="productImage" accept="image/*">
+        </div>
+      </div>
+
+      <div class="dashboard-form-actions">
+        <button type="submit" class="dashboard-bth" id="productSubmitBtn">Add Product</button>
+        <button type="button" class="dashboard-bth-secondary" id="productCancelBtn" hidden>Cancel Edit</button>
+      </div>
+      <p class="dashboard-error" id="productError" hidden></p>
+    </form>
+
+    <div class="dashboard-list" id="productList"></div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="dashboard-section">
+    <h2 class="dashboard-section-title">Gallery</h2>
+
+    <form id="galleryForm" class="dashboard-form">
+      <div class="dashboard-field-row">
+        <div class="dashboard-field">
+          <label for="galleryImage">Image</label>
+          <input type="file" id="galleryImage" accept="image/*" required>
+        </div>
+
+        <div class="dashboard-field">
+          <label for="gallerySortOrder">Sort Order</label>
+          <input type="number" id="gallerySortOrder" value="0">
+        </div>
+      </div>
+
+      <div class="dashboard-field">
+        <label for="galleryCaption">Caption (optional)</label>
+        <input type="text" id="galleryCaption">
+      </div>
+
+      <div class="dashboard-form-actions">
+        <button type="submit" class="dashboard-bth" id="gallerySubmitBtn">Add Image</button>
+      </div>
+      <p class="dashboard-error" id="galleryError" hidden></p>
+    </form>
+
+    <div class="dashboard-gallery-grid" id="galleryList"></div>
+  </section>
+</main>
+
+<div class="toast" id="dashboardToast"></div>
+
+<div class="confirm-modal" id="confirmModal">
+  <div class="confirm-modal__box">
+    <p class="confirm-modal__message" id="confirmModalMessage"></p>
+    <div class="confirm-modal__actions">
+      <button type="button" class="dashboard-bth-secondary" id="confirmModalCancel">Cancel</button>
+      <button type="button" class="dashboard-bth dashboard-bth--danger" id="confirmModalConfirm">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -88,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector(".slider-btn.prev");
   const nextBtn = document.querySelector(".slider-btn.next");
 
+  if (!sliderWrapper || !slides.length || !prevBtn || !nextBtn) return;
+
   let currentIndex = 0;
   const totalSlides = slides.length;
 
